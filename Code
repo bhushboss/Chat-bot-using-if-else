@@ -1,0 +1,26 @@
+# Simple Rule-Based Chatbot using if-else
+# This script simulates a basic chatbot that responds based on keywords in user input.
+
+def chatbot():
+    print("Chatbot: Hello! I'm a simple rule-based chatbot. Type 'bye' to exit.")
+    
+    while True:
+        user_input = input("You: ").lower().strip()  # Get user input and normalize it
+        
+        if "hello" in user_input or "hi" in user_input:
+            print("Chatbot: Hello! How can I help you today?")
+        elif "bye" in user_input or "goodbye" in user_input:
+            print("Chatbot: Goodbye! Have a great day.")
+            break
+        elif "name" in user_input:
+            print("Chatbot: I'm Grok, built by xAI. What's your name?")
+        elif "weather" in user_input:
+            print("Chatbot: I'm not connected to the internet, but I hope it's sunny where you are!")
+        elif "help" in user_input:
+            print("Chatbot: I can chat about greetings, names, or weather. Try 'hello' or 'bye'.")
+        else:
+            print("Chatbot: I'm not sure how to respond to that. Try asking about the weather or saying hello!")
+
+# Run the chatbot
+if __name__ == "__main__":
+    chatbot()
